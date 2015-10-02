@@ -12,4 +12,4 @@ FIXME: Include a short guide to the API.
 
 ## Demo
 
-FIXME: Add a link to the demo.
+http://driphter.github.io/clojure-monkey/
