@@ -5,25 +5,29 @@ window.cljs = clojureMonkey.cljs;
 
 evalButton = document.getElementById('evalButton');
 
-cljsEditor = ace.edit("cljsEditor")
+cljsEditor = ace.edit("cljsEditor");
+cljsEditor.$blockScrolling = Infinity;
 cljsEditor.setTheme("ace/theme/solarized_light");
 cljsEditor.getSession().setTabSize(2);
 cljsEditor.getSession().setMode("ace/mode/clojure");
 
-astEditor = ace.edit("astEditor")
+astEditor = ace.edit("astEditor");
+astEditor.$blockScrolling = Infinity;
 astEditor.setTheme("ace/theme/solarized_light");
 astEditor.getSession().setTabSize(4);
 astEditor.getSession().setMode("ace/mode/json");
 astEditor.setOption('showLineNumbers', false);
 astEditor.setReadOnly(true);
 
-jsEditor = ace.edit("jsEditor")
+jsEditor = ace.edit("jsEditor");
+jsEditor.$blockScrolling = Infinity;
 jsEditor.setTheme("ace/theme/solarized_light");
 jsEditor.getSession().setTabSize(4);
 jsEditor.getSession().setMode("ace/mode/javascript");
 jsEditor.setReadOnly(true);
 
-evalEditor = ace.edit("evalEditor")
+evalEditor = ace.edit("evalEditor");
+evalEditor.$blockScrolling = Infinity;
 evalEditor.setTheme("ace/theme/solarized_light");
 evalEditor.getSession().setMode("ace/mode/clojure");
 evalEditor.renderer.setShowGutter(false);
