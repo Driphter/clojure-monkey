@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>clojure-monkey Demonstration</title>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    </head>
+    <body>
+        <style scoped>
+            #cljsEditor {
+                position: absolute;
+                top: 50px;
+                height: 400px;
+                width: 400px;
+            }
+            #astEditor {
+                position: absolute;
+                top: 50px;
+                left: 840px;
+                height: 800px;
+                width: 600px;
+            }
+            #jsEditor {
+                position: absolute;
+                top: 460px;
+                height: 390px;
+                width: 820px;
+            }
+            #evalEditor {
+                position: absolute;
+                top: 50px;
+                left: 430px;
+                height: 400px;
+                width: 400px;
+            }
+        </style>
+        <button id="evalButton">EVAL</button>
+        <div id="cljsEditor" class="editor">(defn fib-seq []
+  ((fn fib* [a b]
+       (cons a (lazy-seq (fib* b (+ a b)))))
+   0 1))
+(take 20 (fib-seq))</div>
+        <div id="astEditor" class="editor">
+        </div>
+        <div id="jsEditor" class="editor">
+        </div>
+        <div id="evalEditor" class="editor">
+        </div>
+
+        <script type="text/javascript" src="ace/ace.js" charset="utf-8"></script>
+        <script type="text/javascript" src="ace/solarized_light.js" charset="utf-8"></script>
+        <script type="text/javascript" src="ace/mode-clojure.js" charset="utf-8"></script>
+        <script type="text/javascript" src="ace/mode-json.js" charset="utf-8"></script>
+        <script type="text/javascript" src="ace/mode-javascript.js" charset="utf-8"></script>
+        <script src="demo.bundle.js" type="text/javascript"></script>
+    </body>
+</html>
